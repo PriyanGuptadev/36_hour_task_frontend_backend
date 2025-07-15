@@ -8,5 +8,7 @@
     "esModuleInterop": true,
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
+    "types": ["node", "jest"],
+    "exclude": ["node_modules", "dist", "src/test"]
   }
 }
