@@ -9,7 +9,7 @@
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
     "types": ["node"],
-    "typeRoots": ["node_modules/@type"]
+    "typeRoots": ["node_modules/@types"]
   },
   "exclude": ["node_modules", "dist", "src/test"]
 }
