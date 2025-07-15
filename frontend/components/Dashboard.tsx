@@ -5,7 +5,7 @@ import Header from "./Header"
 import Sidebar from "./Sidebar"
 import AlertDetail from "./AlertDetail"
 import type { Alert } from "@/types/alert"
-import { API_BASE_URL } from "../lib/api";
+import { fetchAlerts } from "../lib/api";
  
 export default function Dashboard() {
   const [alerts, setAlerts] = useState<Alert[]>([])
@@ -13,11 +13,9 @@ export default function Dashboard() {
   const [selectedMachine, setSelectedMachine] = useState<string>("")
 
   useEffect(() => {
-    async function fetchAlerts() {
+    async function getAlerts() {
       try {
-        const res = await fetch(`${API_BASE_URL}/api/alerts`);
-        if (!res.ok) throw new Error("Failed to fetch alerts")
-        const data = await res.json()
+        const data = await fetchAlerts();
         setAlerts(data.data.alerts)
         if (data.data.alerts.length > 0) {
           setSelectedAlertId(data.data.alerts[0]._id)
@@ -33,7 +31,7 @@ export default function Dashboard() {
         // setLoading(false)
       }
     }
-    fetchAlerts()
+    getAlerts()
   }, [])
 
   const selectedAlert = alerts.find(a => a._id === selectedAlertId) || null
