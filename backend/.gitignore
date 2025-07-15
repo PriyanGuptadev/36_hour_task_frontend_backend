@@ -24,3 +24,6 @@ uploads/
 .DS_Store
 .idea/
 .vscode/ 
+
+# Lock Files
+package-lock.json
