@@ -16,6 +16,7 @@
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
+    "@types/jest": "^30.0.0",
     "@types/multer": "^2.0.0",
     "cors": "^2.8.5",
     "dotenv": "^16.4.7",
@@ -30,9 +31,7 @@
     "tsconfig-paths": "^4.2.0",
     "typeorm": "^0.3.21",
     "winston": "^3.17.0",
-    "zod": "^3.24.2",
-    "@types/jest": "^30.0.0",
-    "@types/node": "^22.16.4"
+    "zod": "^3.24.2"
   },
   "devDependencies": {
     "@types/cors": "^2.8.17",
@@ -40,6 +39,7 @@
     "@types/mocha": "^10.0.10",
     "@types/mongodb": "^4.0.7",
     "@types/morgan": "^1.9.9",
+    "@types/node": "^24.0.14",
     "@types/supertest": "^6.0.3",
     "jest": "^30.0.4",
     "nodemon": "^3.1.9",
